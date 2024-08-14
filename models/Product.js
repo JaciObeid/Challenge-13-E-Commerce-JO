@@ -27,11 +27,11 @@ Product.init(
       validate: {
         isDecimal: {
           args: true,
-          msg: 'price must be a decimal number with 2 after the decimal'
+          msg: 'Price must include both cent placements to be valid price'
         },
         min: {
           args: [0],
-          msg: 'price must be greater than free.'
+          msg: 'Product Cannot be Free.'
         }
 
       }
@@ -43,7 +43,7 @@ Product.init(
       validate: {
         isNumeric: {
           args: true,
-          msg: 'stock needs to be a number.'
+          msg: 'Needs to be in stock(number).'
         }
       }
     },
